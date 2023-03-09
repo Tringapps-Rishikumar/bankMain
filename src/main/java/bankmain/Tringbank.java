@@ -4,6 +4,6 @@ import option.Bankoption;
 
 public class Tringbank {
     public static void main(String[] args) {
-        Bankoption acc=new Bankoption();
+       new Bankoption();
     }
 }
