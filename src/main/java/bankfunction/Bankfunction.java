@@ -26,11 +26,11 @@ public class Bankfunction {
     public double getBalance() {
         return balance;
     }
-    public void S_deposit(int amount) {
+    public void S_Deposit(int amount) {
         balance += amount;
     }
 
-    public void S_withdraw(int amount) {
+    public void S_Withdraw(int amount) {
         balance -= amount;
     }
 }
