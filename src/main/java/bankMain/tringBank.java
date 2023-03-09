@@ -1,9 +1,9 @@
 package bankMain;
 
-import option.bankoption;
+import option.Bankoption;
 
 public class tringBank {
     public static void main(String[] args) {
-        bankoption acc=new bankoption();
+        Bankoption acc=new Bankoption();
     }
 }
