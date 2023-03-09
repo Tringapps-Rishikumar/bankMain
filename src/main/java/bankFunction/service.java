@@ -10,6 +10,7 @@ public class service {
     protected Logger bn = Logger.getLogger("tringapps bank");
     private int accNumber;
     private bankFunction acc;
+    private String eror="Invalid account number";
 
     protected void  newAccount(){
         bn.info("enter your name : ");
@@ -38,7 +39,7 @@ public class service {
             bn.info("transaction successfull");
         }
         else{
-            bn.info("invalid account number");
+            bn.info(eror);
         }
 
     }
@@ -53,7 +54,7 @@ public class service {
             bn.info("transaction successfull");
         }
         else{
-            bn.info("invalid account number");
+            bn.info(eror);
         }
     }
     protected void  check() {
@@ -67,7 +68,7 @@ public class service {
             bn.info("Current balance : " + display.getBalance());
         }
         else{
-            bn.info("invalid account number");
+            bn.info(eror);
         }
 
     }
