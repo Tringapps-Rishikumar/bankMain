@@ -1,16 +1,16 @@
-package bankFunction;
+package bankfunction;
 
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class service {
-    private HashMap<Integer,bankFunction> user = new HashMap<>();
+public class Service {
+    private HashMap<Integer, Bankfunction> user = new HashMap<>();
     protected Scanner sc = new Scanner(System.in);
     protected Logger bn = Logger.getLogger("tringapps bank");
     private int accNumber;
-    private bankFunction acc;
+    private Bankfunction acc;
     private String eror="Invalid account number";
 
     protected void  newAccount(){
@@ -20,7 +20,7 @@ public class service {
         int accountNumber = sc.nextInt();
         bn.info("Enter initial amount please : ");
         int balance = sc.nextInt();
-        acc = new bankFunction(name, accountNumber, balance);
+        acc = new Bankfunction(name, accountNumber, balance);
         user.put(accountNumber, acc);
         if(user.isEmpty()){
             bn.info("no account create");
@@ -63,7 +63,7 @@ public class service {
         accNumber = sc.nextInt();
 
         if (user.containsKey(accNumber)) {
-            bankFunction display = user.get(accNumber);
+            Bankfunction display = user.get(accNumber);
             bn.info("Account Holder Name : " + display.getName());
             bn.info("Account Number : " + display.getAccountNumber());
             bn.info("Current balance : " + display.getBalance());

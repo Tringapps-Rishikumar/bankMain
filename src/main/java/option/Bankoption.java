@@ -1,8 +1,8 @@
 package option;
 
-import bankFunction.service;
+import bankfunction.Service;
 
-public class Bankoption extends service {
+public class Bankoption extends Service {
     public Bankoption(){
         while(true) {
             bn.info("enter your choice 1)new user  2)deposit  3)withdraw  4)balance  5)display  6)exit ");

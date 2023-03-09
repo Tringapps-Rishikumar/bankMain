@@ -1,11 +1,11 @@
-package bankFunction;
+package bankfunction;
 
-public class bankFunction {
+public class Bankfunction {
     private String name;
     private int accNumber;
     private int balance;
 
-    public bankFunction(String name, int accNumber, int balance) {
+    public Bankfunction(String name, int accNumber, int balance) {
         this.name = name;
         this.accNumber = accNumber;
         this.balance = balance;
