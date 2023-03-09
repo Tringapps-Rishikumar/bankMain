@@ -1,8 +1,8 @@
-package bankMain;
+package bankmain;
 
 import option.Bankoption;
 
-public class tringBank {
+public class Tringbank {
     public static void main(String[] args) {
         Bankoption acc=new Bankoption();
     }
