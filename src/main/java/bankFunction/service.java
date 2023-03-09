@@ -2,6 +2,7 @@ package bankFunction;
 
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class service {
@@ -79,7 +80,7 @@ public class service {
             bn.info("no account are there");
         }
         else{
-            bn.info(String.valueOf(user));
+            bn.log(Level.INFO, () -> "the acount are" + user);
         }
     }
 
