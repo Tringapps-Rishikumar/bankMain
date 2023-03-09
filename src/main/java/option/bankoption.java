@@ -2,8 +2,8 @@ package option;
 
 import bankFunction.service;
 
-public class bankOption extends service {
-    public bankOption(){
+public class bankoption extends service {
+    public bankoption(){
         while(true) {
             bn.info("enter your choice 1)new user  2)deposit  3)withdraw  4)balance  5)display  6)exit ");
             int ch = sc.nextInt();
