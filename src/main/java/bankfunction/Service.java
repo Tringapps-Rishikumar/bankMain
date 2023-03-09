@@ -36,7 +36,7 @@ public class Service {
         if(user.containsKey(accNumber)){
             bn.info("enter the amount to be deposited:");
             int amount=sc.nextInt();
-            acc.Deposit(amount);
+            acc.sDeposit(amount);
             bn.info("transaction successfull");
         }
         else{
@@ -51,7 +51,7 @@ public class Service {
         if(user.containsKey(accNumber)){
             bn.info("enter the amount to be withdraw :");
             int amount=sc.nextInt();
-            acc.Withdraw(amount);
+            acc.sWithdraw(amount);
             bn.info("transaction successfull");
         }
         else{
