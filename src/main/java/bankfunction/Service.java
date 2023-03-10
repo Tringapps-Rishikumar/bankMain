@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+class user_exc extends Exception{
+
+}
 
 public class Service {
     private HashMap<Integer, Bankfunction> user = new HashMap<>();
@@ -44,19 +47,29 @@ public class Service {
         }
 
     }
-    protected void  withdraw()
-    {
+    protected void  withdraw() {
+
         bn.info("enter your account number to withdraw :");
-        accNumber=sc.nextInt();
-        if(user.containsKey(accNumber)){
-            bn.info("enter the amount to be withdraw :");
-            int amount=sc.nextInt();
-            acc.sWithdraw(amount);
-            bn.info("transaction successfull");
+        accNumber = sc.nextInt();
+        if (user.containsKey(accNumber)) {
+            try {
+                bn.info("enter the amount to be withdraw :");
+                int amount = sc.nextInt();
+                if (amount > acc.getBalance()) {
+                    throw new user_exc();
+                } else {
+                    acc.sWithdraw(amount);
+                    bn.info("transaction successfull");
+                }
+            } catch (user_exc e) {
+                bn.info("insuficient balance");
+
+            }
         }
-        else{
+        else {
             bn.info(eror);
         }
+
     }
     protected void  check() {
         bn.info("Enter Account Number : ");
