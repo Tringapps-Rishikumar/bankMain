@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-class user_exc extends Exception{
+class Insuficient extends Exception{
 
 }
 
@@ -56,12 +56,12 @@ public class Service {
                 bn.info("enter the amount to be withdraw :");
                 int amount = sc.nextInt();
                 if (amount > acc.getBalance()) {
-                    throw new user_exc();
+                    throw new Insuficient();
                 } else {
                     acc.sWithdraw(amount);
                     bn.info("transaction successfull");
                 }
-            } catch (user_exc e) {
+            } catch (Insuficient e) {
                 bn.info("insuficient balance");
 
             }
